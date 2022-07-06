@@ -23,3 +23,6 @@ We follow the same training recipt in BREEDS to train the base step model and us
 # Training
 
 # Testing
+
+# Cite us
+If you use this repository, please consider to cite
