@@ -1,6 +1,6 @@
 # ISL
 
-This is the repository that contains the source code for the paper "Balancing between Forgetting and Acquisition in Incremental Subpopulation Learning". This code is refactored after the ECCV acceptance.
+This is the repository that contains the source code for the paper "Balancing between Forgetting and Acquisition in Incremental Subpopulation Learning" (ECCV-2022). This code is refactored after the ECCV-2022 acceptance.
 
 
 # Requirements
