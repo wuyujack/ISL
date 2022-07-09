@@ -15,6 +15,8 @@ This repository uses the following libraries:
 
 We recommend first read the installation guideline from https://github.com/MadryLab/BREEDS-Benchmarks and also be aware of the requirement in breeds-benchmarks since our code is directly based on the breeds-benchmarks to generate the ISL experimental protocols.
 
+1. you need to git clone the `git clone https://github.com/MadryLab/BREEDS-Benchmarks.git` to get the BREEDS benchmark's statistics.
+
 # Dataset
 We use the same dataset as in breeds-benchmarks, i.e., ILSVRC2012 dataset, to generate the BREEDS datasets following the breeds-benchmarks. Please Download the [ImageNet](http://www.image-net.org/) dataset from the official website.
 
