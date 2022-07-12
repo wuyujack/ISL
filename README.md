@@ -121,7 +121,7 @@ We want to thanks the author of [BREEDS dataset](https://openreview.net/forum?id
 
 Mingfu want to sincerely thank the author of [BREEDS dataset](https://openreview.net/forum?id=mQPBmvyAuk) for timely response regarding the replication of their results on Oct. 2021, which largely speed up the progress of this research project. 
 
-The code in this project is largerly borrowed and developed upon [BREEDS-Benchmarks](https://github.com/MadryLab/BREEDS-Benchmarks). The code for reproducing the result of the BREEDS is based on the [DIANet](https://github.com/gbup-group/DIANet) and [IEBN](https://github.com/gbup-group/IEBN) and [pytorch-classification](https://github.com/bearpaw/pytorch-classification).
+The code in this project is largerly developed upon [BREEDS-Benchmarks](https://github.com/MadryLab/BREEDS-Benchmarks). The code for reproducing the result of the BREEDS is based on the [DIANet](https://github.com/gbup-group/DIANet) and [IEBN](https://github.com/gbup-group/IEBN) and [pytorch-classification](https://github.com/bearpaw/pytorch-classification).
 
 
 
