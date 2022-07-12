@@ -77,9 +77,9 @@ We use the same dataset as in [breeds-benchmarks](https://openreview.net/forum?i
 The path of your ILSVRC2012 dataset will be passed by the `--data_dir` when you are running the experiments later.
 
 # Pretrained Model of the *base step*
-We follow the same training receipt detailed in [BREEDS]((https://openreview.net/forum?id=mQPBmvyAuk)) supplementary to train the *base step model* and  we use the same *base step model* to perform incremental subpopulation learning for all the compared methods. We first replicate the results in [BREEDS]((https://openreview.net/forum?id=mQPBmvyAuk)) by exactly following their training receipt on the source split of every dataset, i.e., Entity13 and Entity30, and we do observe the huge subpopulation shifting problem as demonstrated in BREEDS. 
+We follow the same training receipt detailed in [BREEDS]((https://openreview.net/forum?id=mQPBmvyAuk)) supplementary to train the *base step model* and  we use the same *base step model* to perform incremental subpopulation learning for all the compared methods. We first replicate the results in [BREEDS]((https://openreview.net/forum?id=mQPBmvyAuk)) by exactly following their training receipt on the source split of every dataset, i.e., Entity13 and Entity30, and we do observe the critical subpopulation shifting problem as demonstrated in [BREEDS]((https://openreview.net/forum?id=mQPBmvyAuk)). 
 
-Since BREEDS do not provide any pretraiend models for their paper on the source part of each dataset, and to faciliate the research, we provide our pretrained *base step model* here: 
+Since [BREEDS]((https://openreview.net/forum?id=mQPBmvyAuk)) do not provide any pretraiend models on the source part of each dataset for their paper, and to faciliate the research, we provide our pretrained *base step model* here: 
 
 Entity30: [[google drive](https://drive.google.com/file/d/1O6NFbqK55m3LP697TIjjjotUl_jHOn0c/view?usp=sharing)] 
 
