@@ -62,6 +62,7 @@ Entity30: [[google drive](https://drive.google.com/file/d/1O6NFbqK55m3LP697TIjjj
 
 Entity13: [[google drive](https://drive.google.com/file/d/1jlJ2XDxt4U_itLiL09mCaIL1bEpTA_N_/view?usp=sharing)]
 
+You can download them and put them in a folder, e.g., `ckpts/entity30/` and `ckpts/entity13/`. You will pass their paths by `--base_step_pretrained_path` when you are running the experiments later.
 
 # Reproduction Guideline
 To replicate the results of our proposed two-stage method on a specific experimental protocol, e.g., the 15 Steps Entity30, run the following command:
