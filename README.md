@@ -43,9 +43,19 @@ You first need to read the installation guideline from [BREEDS-Benchmarks](https
 
 We leverage the latest [BREEDS dataset](https://openreview.net/forum?id=mQPBmvyAuk) in our experiments. BREEDS simulates the real-world subpopulation shifting based on the [ImageNet](http://www.image-net.org/), and it comprises **four different datasets: Entity-13, Entity-30, Living-17, and Non-Living-26**, with a total of 0.86 million~(M) of images. However, BREEDS is not proposed for incremental subpopulation learning~(ISL), so we need to further create the ISL-specific benchmark based on it. Since we focus on the incremental learner's performance in the sufficiently long run, hence in present work, our main testbeds are based on **Entity-13 and Entity-30** from BREEDS as they have the most number of subclasses, i.e., totally 260 and 240 subclasses respectively, and more than 0.6M images. To the best of our knowledge, this is the first time to leverage such large-scale datasets to investigate the ISL. 
 
+<details>
+<summary> Experimental Protocols Design</summary>
+
 Entity-30 and Entity-13 have 30 and 13 classes where each class has 8 and 20 subclasses respectively. We design 3 protocols for each dataset. In the *base step*, the training set of each class comprises data from 4 and 10 subclasses for Entity-30 and Entity-13 respectively, the same as [breeds-benchmarks](https://openreview.net/forum?id=mQPBmvyAuk) to simulate subpopulation shifting. Then we split the rest of 120 and 130 unseen subclasses in each dataset respectively to create different protocols. For Entity-30, we design protocols with 4, 8, 15 incremental steps: in each step, for 4 Steps setup, each class is introduced with 1 unseen subclass; for 8 and 15 Steps setups, we randomly choose 15 and 8 out of 30 classes respectively to introduce with 1 unseen subclass. For Entity-13, we design protocols with 5, 10, 13 incremental steps: in each step, for 5 and 10 Steps setups, we introduce 2 and 1 unseen subclasses for each class respectively; For 13 Steps setup, we randomly sample 10 out of 13 classes to introduce with 1 unseen subclass. These designs simulate two scenarios: (1) all the classes are updated with at least 1 unseen subclass; (2) only a part of classes are updated with unseen subclasses. We denote the former as **even update** and the latter as **uneven update**. 
 
+</details>
+
+<details>
+<summary> Dataset Generation for Different Incremental Steps</summary>
+
 For the *base step* dataset genration, we exactly use the source part of each dataset in BREEDS, which is splited by the `split='rand'` in the [BREEDS-Benchmarks](https://github.com/MadryLab/BREEDS-Benchmarks). By doing so, our ISL exploration will be comparable to the existing BREEDS benchmark to see whether the incremental learning may help mitigate the subpopulation shifting problem. In BREEDS paper, they train on the source part of each dataset and then test on the target part (with unseen subpopulations) to demonstrate the subpopulation shifting problem, where the latter's performance drops mostly larger than 30%. In our paper, since we want to explore whether we can mitigate the subpopulation shifting by incremental learning, hence we split the target part of each dataset and adapt our original model on them in an incremental learning manner. We want to investigate whether these unseen subpopulaitons' performance can be improved while the seen population's performance can be still maintained without catastrophic forgetting.
+
+</details>
 
 # Data Preparation
 We use the same dataset as in [breeds-benchmarks](https://openreview.net/forum?id=mQPBmvyAuk), i.e., ILSVRC2012 dataset, to generate the BREEDS datasets following the breeds-benchmarks. Please Download the [ImageNet](http://www.image-net.org/) dataset from the official website. The dataset should be organized like the following:
