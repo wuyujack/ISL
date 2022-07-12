@@ -1,6 +1,6 @@
 # ISL [ECCV-2022]
 
-This is the repository that contains the source code for the paper "Balancing between Forgetting and Acquisition in Incremental Subpopulation Learning" (ECCV-2022). This code is refactored after the ECCV-2022 acceptance.
+This is the official repository that contains the source code for the paper "Balancing between Forgetting and Acquisition in Incremental Subpopulation Learning" (ECCV-2022). This code is refactored after the ECCV-2022 acceptance and re-test on PyTorch 1.7.0.
 
 
 # Requirements
