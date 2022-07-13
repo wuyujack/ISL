@@ -300,7 +300,7 @@ def parse_args():
                         help='experiment name',
                         required=False,
                         type=str,
-                        default='debug_10_task_lr_1e-2_wd1e-4_mo9e-1_test')
+                        default='debug_10_task_lr_5e-2_wd1e-4_mo9e-1_test')
     parser.add_argument('--retrain_epoch',
                         help='incremental step training epoch',
                         required=False,
