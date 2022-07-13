@@ -310,7 +310,7 @@ def parse_args():
                         help='incremental learning rate',
                         required=False,
                         type=float,
-                        default=0.01)
+                        default=0.05)
     parser.add_argument('--wd',
                         help='weigth decay',
                         required=False,
