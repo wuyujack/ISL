@@ -8,6 +8,8 @@ This is the official repository that contains the source code for the paper "Bal
 # Introduction
 The subpopulation shifting challenge, known as some subpopulations of a category that are not seen during training, severely limits the classification performance of the state-of-the-art convolutional neural networks. Thus, to mitigate this practical issue, we explore incremental subpopulation learning~(ISL) to adapt the original model via incrementally learning the unseen subpopulations without retaining the seen population data. However, striking a great balance between subpopulation learning and seen population forgetting is the main challenge in ISL but is not well studied by existing approaches. These incremental learners simply use a pre-defined and fixed hyperparameter to balance the learning objective and forgetting regularization, but their learning is usually biased towards either side in the long run. In this paper, we propose a novel two-stage learning scheme to explicitly disentangle the acquisition and forgetting for achieving a better balance between subpopulation learning and seen population forgetting: in the first ''gain-acquisition'' stage, we progressively learn a new classifier based on the margin-enforce loss, which enforces the hard samples and population to have a larger weight for classifier updating and avoid uniformly updating all the population; in the second ''counter-forgetting'' stage, we search for the proper combination of the new and old classifiers by optimizing a novel objective based on proxies of forgetting and acquisition. We benchmark the representative and state-of-the-art non-exemplar-based incremental learning methods on a large-scale subpopulation shifting dataset for the first time. Under almost all the challenging ISL protocols, we significantly outperform other methods by a large margin, demonstrating our superiority to alleviate the subpopulation shifting problem.
 
+We hope our proposed method can serve as a novel baseline tailored to ISL and inspire more future research in ISL.
+
 ![Illustrating of the two-stage training scheme](/images/structure_all_new_new.png)
 
 
@@ -21,9 +23,9 @@ This repository uses the following libraries:
 - networkx
 - tqdm
 
-We recemmend to use the conda to create an specific environment for this project.
+We recommend to use the `conda` to create an specific environment for this project.
 
-You first need to read the installation guideline from [BREEDS-Benchmarks](https://github.com/MadryLab/BREEDS-Benchmarks) and You should also be aware of the requirement in BREEDS-Benchmarks repo since our code is directly based on the BREEDS-Benchmarks to generate the ISL experimental protocols.
+You first need to read the installation guideline from [BREEDS-Benchmarks](https://github.com/MadryLab/BREEDS-Benchmarks) and you should also be aware of the requirement in BREEDS-Benchmarks repo since our code is directly based on the [BREEDS-Benchmarks](https://github.com/MadryLab/BREEDS-Benchmarks) to generate the ISL experimental protocols.
 
 0. Clone this repo: `https://github.com/wuyujack/ISL.git`
 1. You can git clone the BREEDS-Benchmarks anywhere in your computer, just use: `git clone https://github.com/MadryLab/BREEDS-Benchmarks.git` to get the BREEDS benchmark's splits information from their official GitHub repo. The path of your BREEDS-Benchmarks folder will be passed by the `--info_dir` when you are running the experiments later. 
@@ -79,7 +81,7 @@ The path of your ILSVRC2012 dataset will be passed by the `--data_dir` when you 
 # Pretrained Model of the *base step*
 We follow the same training receipt detailed in [BREEDS]((https://openreview.net/forum?id=mQPBmvyAuk)) supplementary to train the *base step model* and  we use the same *base step model* to perform incremental subpopulation learning for all the compared methods. We first replicate the results in [BREEDS]((https://openreview.net/forum?id=mQPBmvyAuk)) by exactly following their training receipt on the source split of every dataset, i.e., Entity13 and Entity30, and we do observe the critical subpopulation shifting problem as demonstrated in [BREEDS]((https://openreview.net/forum?id=mQPBmvyAuk)). 
 
-Since [BREEDS]((https://openreview.net/forum?id=mQPBmvyAuk)) do not provide any pretraiend models on the source part of each dataset for their paper, and to faciliate the research, we provide our pretrained *base step model* here: 
+Since [BREEDS]((https://openreview.net/forum?id=mQPBmvyAuk)) do not provide any pretrained models on the source part of each dataset for their paper, thus to faciliate the research, we provide our pretrained *base step model* here: 
 
 Entity30: [[google drive](https://drive.google.com/file/d/1O6NFbqK55m3LP697TIjjjotUl_jHOn0c/view?usp=sharing)] 
 
@@ -87,7 +89,7 @@ Entity13: [[google drive](https://drive.google.com/file/d/1jlJ2XDxt4U_itLiL09mCa
 
 You can download them and put them in a folder, e.g., `ckpts/entity30/` and `ckpts/entity13/`. You will pass their paths by `--base_step_pretrained_path` when you are running the experiments later.
 
-If you want to train these base step models from scratch, you can refer to `train_imagenet_vanilla_breeds_dataset_standard_data_augmentation_300_epoch.py` for more details.
+If you want to train these *base step* models from scratch, you can refer to `train_imagenet_vanilla_breeds_dataset_standard_data_augmentation_300_epoch.py` for more details.
 
 # Reproduction Guideline
 To replicate the results of our proposed two-stage method on a specific ISL protocol, e.g., the 15 Steps Entity30, run the following command:
@@ -106,7 +108,7 @@ The command is almost the same for other ISL protocols and you only need to chan
 
 
 # Cite us
-If you use this repository, please consider to cite:
+If you use this repository and find it useful for your research, please consider to cite:
 ```
 title={Balancing between Forgetting and Acquisition in Incremental Subpopulation Learning},
     author={Mingfu, Liang and Jiahuan, Zhou and Wei, Wei and Ying, Wu},
