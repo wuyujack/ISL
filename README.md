@@ -1,6 +1,6 @@
 # ISL [ECCV-2022] 
 
-[[Poster](https://drive.google.com/uc?id=1w0xS3TCQfTnuRsUQBPeK-bdX_-anw1iB)][[YouTube](https://www.youtube.com/watch?v=QfUJ9YTxyc0)][[Project Page](https://2022eccvisl.github.io/)][[Paper](https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136860354.pdf)][[Supplementary](https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136860354-supp.pdf)]
+[[Poster](https://drive.google.com/uc?id=1w0xS3TCQfTnuRsUQBPeK-bdX_-anw1iB)][[YouTube](https://www.youtube.com/watch?v=QfUJ9YTxyc0)][[Project Page](https://2022eccvisl.github.io/)][[Paper](https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136860354.pdf)][[Supplementary](https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136860354-supp.pdf)][[Springer Version](https://link.springer.com/chapter/10.1007/978-3-031-19809-0_21)]
 
 This is the official repository that contains the source code for the paper "Balancing between Forgetting and Acquisition in Incremental Subpopulation Learning" (ECCV-2022). This code is refactored after the ECCV-2022 acceptance and re-tested on PyTorch 1.7.0 with 4 RTX3090 GPUs.
 
