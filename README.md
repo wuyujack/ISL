@@ -115,10 +115,16 @@ The command is almost the same for other ISL protocols and you only need to chan
 # Cite us
 If you use this repository and find it useful for your research, please consider to cite:
 ```
-title={Balancing between Forgetting and Acquisition in Incremental Subpopulation Learning},
-    author={Mingfu, Liang and Jiahuan, Zhou and Wei, Wei and Ying, Wu},
-    booktitle={European Conference on Computer Vision},
-    year={2022}
+@InProceedings{10.1007/978-3-031-19809-0_21,
+author="Liang, Mingfu and Zhou, Jiahuan and Wei, Wei and Wu, Ying",
+editor="Avidan, Shai and Brostow, Gabriel and Ciss{\'e}, Moustapha and Farinella, Giovanni Maria and Hassner, Tal",
+title="Balancing Between Forgetting and Acquisition in Incremental Subpopulation Learning",
+booktitle="Computer Vision -- ECCV 2022",
+year="2022",
+publisher="Springer Nature Switzerland",
+address="Cham",
+pages="364--380",
+isbn="978-3-031-19809-0"
 }
 ```
 
